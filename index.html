@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión: Digitalizar Taberna de Moe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@300;400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; background-color: #fdfbf7; color: #1f2937; }
+        .font-hand { font-family: 'Patrick Hand', cursive; }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin: 0 auto; height: 300px; }
+        .tab-active { border-bottom: 2px solid #15803d; color: #15803d; font-weight: bold; }
+        .tab-inactive { color: #6b7280; }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">🍺</span>
+                    <span class="font-hand text-2xl tracking-wider font-bold">Taberna de Moe Ops</span>
+                </div>
+                <div>
+                    <a href="https://github.com/2DAM-SGE" target="_blank" class="hover:bg-green-700 px-3 py-2 rounded text-sm">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 py-8 text-center">
+        <h1 class="text-4xl font-bold text-green-900 font-hand mb-4">Repositorio de Prácticas UD4</h1>
+        <p class="text-xl text-gray-600 mb-8">Bienvenido al centro de mando de la Taberna de Moe.</p>
+        
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+            <div class="bg-white p-6 rounded-xl shadow border-l-4 border-amber-500">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">📂 Estructura del Proyecto</h2>
+                <p class="mb-4">Este repositorio contiene los módulos Odoo necesarios para la digitalización.</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li><strong>UD4.Creación/taberna_mou_inicio</strong>: Módulo "Hola Mundo".</li>
+                    <li><strong>UD4.Creación/gestion_barra</strong>: Lógica de negocio y modelos.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow border-l-4 border-blue-500">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">🚀 Instrucciones</h2>
+                <p class="mb-4">Para desplegar estos módulos en tu contenedor Docker:</p>
+                <code class="block bg-gray-900 text-green-400 p-3 rounded text-sm font-mono overflow-x-auto">
+                    git clone https://github.com/2DAM-SGE/SGE-UD4-Practicas.git<br>
+                    # Copia las carpetas a tu volumen de addons
+                </code>
+            </div>
+        </div>
+        
+        <div class="mt-12 bg-green-50 p-8 rounded-xl border border-green-200">
+            <h2 class="text-3xl font-bold text-green-900 mb-4">Guía Interactiva Completa</h2>
+            <p class="mb-6">Accede a la documentación paso a paso, simuladores de lógica y configuración SSH.</p>
+            <!-- Aquí incrustaríamos el contenido completo del interactivo si fuera necesario, 
+                 pero para este ejemplo, servimos esta página como landing -->
+            <button onclick="alert('¡Esta página está viva en GitHub Pages!')" class="bg-green-700 text-white px-6 py-3 rounded-full font-bold shadow hover:bg-green-800 transition">
+                Explorar Documentación
+            </button>
+        </div>
+    </main>
+</body>
+</html>

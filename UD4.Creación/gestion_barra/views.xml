@@ -1,0 +1,22 @@
+<odoo>
+    <record id="view_taberna_incidencia_tree" model="ir.ui.view">
+        <field name="name">taberna.incidencia.tree</field>
+        <field name="model">taberna.incidencia</field>
+        <field name="arch" type="xml">
+            <tree string="Incidencias">
+                <field name="cliente"/>
+                <field name="nivel_alcohol"/>
+                <field name="expulsar"/>
+                <field name="pagado"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_taberna_incidencia" model="ir.actions.act_window">
+        <field name="name">Taberna de Mou</field>
+        <field name="res_model">taberna.incidencia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_taberna_root" name="Taberna de Mou" action="action_taberna_incidencia"/>
+</odoo>
